@@ -1,0 +1,17 @@
+def exe_5():
+    res = 0
+    while True:
+        numbers = input('Введите число: ').split()
+        for i in numbers:
+            try:
+                if i == '*':
+                    print(f'Сумма чисел равна {res}. Выходим')
+                    return
+                else:
+                    res += int(i)
+            except ValueError:
+                print('Введите число или выходите нажав - *')
+        print(f'Сумма чисел {res}')
+
+
+exe_5()
