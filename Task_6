@@ -1,0 +1,16 @@
+from itertools import count
+from itertools import cycle
+
+for el in count(int(input('Введите стартовое число '))):
+    print(el)
+    if el == 45:
+        break
+
+
+my_list = [True, 'ABC', 123, None]
+b = 0
+for el in cycle(my_list):
+    print(el)
+    b += 1
+    if b >10:
+        break
