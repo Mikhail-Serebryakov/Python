@@ -1,0 +1,12 @@
+def splitting():
+    num1 = int(input("Укажите первое число: "))
+    num2 = int(input("Укажите второе число: "))
+    try:
+        if num1 and num2 is 0:
+            print('Деление на 0')
+    except ZeroDivisionError:
+        return None
+    split = print('{:.2f}'.format(num1 / num2))
+    return split
+
+splitting()
