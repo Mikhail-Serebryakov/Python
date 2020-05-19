@@ -1,0 +1,4 @@
+with open('task_5.txt', 'w', encoding='utf-8') as file:
+    line = int(input('Введите числа:'.split()))
+    file.writelines(line)
+    print(sum(line))

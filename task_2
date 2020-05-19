@@ -1,0 +1,8 @@
+my_file = open('task_2', encoding='utf-8')
+content = my_file.readlines()
+print('Количество строк в файле -', len(content))
+my_file = open('task_2', encoding='utf-8')
+content = my_file.read()
+content = content.split()
+print('Общее количество слов -', len(content))
+my_file.close()

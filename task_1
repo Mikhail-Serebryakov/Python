@@ -1,0 +1,8 @@
+file = open("one_file.txt", "w", encoding='utf-8')
+line_i = input('Введите текст \n',)
+while True:
+    file.writelines(line_i)
+    line_i = input('Введите текст \n')
+    if not line_i:
+        break
+file.close()
