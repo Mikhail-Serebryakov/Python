@@ -1,0 +1,13 @@
+with open('task_3', 'r', encoding='utf-8') as f:
+    workers = {}
+    for line in f:
+        key, value = line.split()
+        workers[key] = value
+        if int(value) < 20000:
+            print(f'{key}: Зарплата меньше 20000')
+
+
+print('Средний оклад', int(value) / sum(map(int, value)))
+print('Средний оклад', value)
+
+""" Дальше не смог понят как найти срений оклад"""

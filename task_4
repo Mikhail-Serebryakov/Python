@@ -1,0 +1,19 @@
+file_new = []
+with open('task_4', encoding='utf-8') as f:
+    for i in f:
+        if i == 'One':
+            i.replace('One', 'Один')
+            file_new.append(i)
+        if i == 'Two':
+            i.replace('Two', 'Два')
+            file_new.append(i)
+        if i == 'Three':
+            i.replace('Three', 'Три')
+            file_new.append(i)
+        if i == 'Four':
+            i.replace('Four', 'Четыри')
+            file_new.append(i)
+    print(file_new)
+
+with open('file_4_new.txt', 'w') as f_2:
+    f_2.writelines(file_new)
