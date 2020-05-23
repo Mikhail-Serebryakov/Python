@@ -1,0 +1,60 @@
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
+
+    def go(self):
+        return print(self.name, 'Машина поехала...')
+
+    def stop(self):
+        return print(self.name, 'Машина остановилась!')
+
+    def direction(self):
+        return print(self.name, 'Машина повернула')
+
+    def show_speed(self):
+        return print(self.name, 'Текущая скорость автомобиля', self.speed)
+
+class TownCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 60:
+            print('Привышение скорости!')
+
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def show_speed(self):
+        if self.speed > 40:
+            print('Привышение скорости!')
+
+class PoliceCar(Car):
+    def __init__(self, speed, color, name, is_police):
+        super().__init__(speed, color, name, is_police)
+
+    def police(self):
+        if self.is_police:
+            return print(self.name, 'Полиция')
+        else:
+            return print(self.name, 'Не полиция')
+
+
+
+mazaraty = SportCar(154, 'Синий', 'Mazaraty', False)
+mazda = TownCar(66, 'Белый', 'Мазда', False)
+lorry = WorkCar(46, 'Зеленый', 'Газель', False)
+ford = PoliceCar(110, 'Голубой',  'Ford', True)
+
+print(mazaraty.direction())
+print('Когда', mazda.go(), 'Тогда', lorry.stop()) # Здесь не понял почему в консоле выводится "Когда None, Тогда None
+lorry.show_speed()
