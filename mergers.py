@@ -9,3 +9,6 @@ def hello(name):
     return print(f'Hello {name}')
 
 hello("Mikl")
+
+b = "commit 01"
+c = "commit 01"
